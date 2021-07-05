@@ -14,4 +14,12 @@ public class MoodAnalyserTest {
         String mood = moodAnalyser.analyseMood();
         Assertions.assertEquals(mood, "SAD");
     }
+
+    //UC1-TC1.2
+    @Test
+    void givenIAmInAnyMood_shouldReturnHappy() throws MoodAnalyserException {
+        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in any mood");
+        String mood = moodAnalyser.analyseMood();
+        Assertions.assertEquals(mood, "HAPPY");
+    }
 }
