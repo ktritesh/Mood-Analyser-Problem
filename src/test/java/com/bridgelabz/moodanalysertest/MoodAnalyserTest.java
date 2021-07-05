@@ -49,4 +49,15 @@ public class MoodAnalyserTest {
            // Assertions.assertEquals(MoodAnalyserException.ExceptionType.ENTERED_NULL, e.type);
         }
     }
+
+    //UC3
+    @Test
+    void givenEmpty_shouldInformUserToEnterValidMood() {
+        MoodAnalyser moodAnalyzer = new MoodAnalyser("");
+        try {
+            moodAnalyzer.analyseMood();
+        } catch (MoodAnalyserException e) {
+           // Assertions.assertEquals(MoodAnalyserException.ExceptionType.ENTERED_EMPTY, e.type);
+        }
+    }
 }
