@@ -38,4 +38,15 @@ public class MoodAnalyserTest {
         String mood = moodAnalyser.analyseMood();
         Assertions.assertEquals(mood, "HAPPY");
     }
+
+    //UC2
+    @Test
+    void givenNullException_shouldInformUserToEnterValidMood() {
+        MoodAnalyser moodAnalyzer = new MoodAnalyser(null);
+        try {
+            moodAnalyzer.analyseMood();
+        } catch (MoodAnalyserException e) {
+           // Assertions.assertEquals(MoodAnalyserException.ExceptionType.ENTERED_NULL, e.type);
+        }
+    }
 }
